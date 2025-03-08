@@ -1,8 +1,8 @@
 
 
 # Dataset
-dataset_name = "cifar10"
-num_classes  = 10
+dataset_name = "cifar100"
+num_classes  = 100
 
 # Validation split
 validation_split = 0.15
@@ -24,13 +24,13 @@ image_size = 32
 # Patch size 
 patch_size = 4
 # Embedding dimension
-embed_dim  = 128
+embed_dim  = 256
 # Number of blocks
-num_blocks = 8
+num_blocks = 12
 # Number of heads
 num_heads  = 8
 # Hidden dimension
-hidden_dim = 512
+hidden_dim = 1024
 # RGB ? 
 rgb        = True 
 # Dropout 

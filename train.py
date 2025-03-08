@@ -1,6 +1,6 @@
 from data.utils import load_dataset, split_dataset, create_dataloader
 
-from model.utils import create_classifier_model, get_device, get_trainer
+from model.utils import create_classifier_model, get_device, get_trainer, get_no_of_parameters
 
 from hyperparameters import dataset_name, validation_split, batch_size, shuffle, no_of_epochs
 
@@ -34,6 +34,9 @@ valid_dataloader = create_dataloader(valid_set, batch_size, shuffle = shuffle)
 # Load the model and set up a trainer 
 classifier_model = create_classifier_model(num_classes).to(device)
 optimizer        = get_trainer(classifier_model) 
+
+print(f"Number of params : {get_no_of_parameters(classifier_model)}")
+
 # scheduler        = ReduceLROnPlateau(optimizer, mode='min', patience=5, factor=0.1)
 # scheduler        = ExponentialLR(optimizer, gamma = 0.9) 
 
