@@ -1,8 +1,8 @@
 
 
 # Dataset
-dataset_name = "cifar100"
-num_classes  = 100
+dataset_name = "cifar10"
+num_classes  = 10
 
 # Validation split
 validation_split = 0.15
