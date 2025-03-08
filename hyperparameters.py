@@ -14,7 +14,6 @@ batch_size = 128
 shuffle = True
 
 
-
 ####################################################################################
 
 ############################ Model Parameters ######################################
@@ -41,13 +40,6 @@ dropout    = 0.1
 
 # Number of epochs 
 no_of_epochs = 50
-
-# Learning rate
-learning_rate = 1e-2
-
-# Nesterov momentum if needed
-nesterov_momentum = 0.9
-nesterov_needed   = True 
 
 ####################################################################################
 

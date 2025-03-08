@@ -9,7 +9,6 @@ import matplotlib.pyplot as plt
 import torch.nn as nn  
 from tqdm import tqdm 
 from datetime import datetime 
-from torch.optim.lr_scheduler import ReduceLROnPlateau, ExponentialLR
 import os 
 
 # Create a save directory under model/training using the dataset name and a timestamp
@@ -34,13 +33,7 @@ valid_dataloader = create_dataloader(valid_set, batch_size, shuffle = shuffle)
 # Load the model and set up a trainer 
 classifier_model = create_classifier_model(num_classes).to(device)
 optimizer        = get_trainer(classifier_model) 
-
 print(f"Number of params : {get_no_of_parameters(classifier_model)}")
-
-# scheduler        = ReduceLROnPlateau(optimizer, mode='min', patience=5, factor=0.1)
-# scheduler        = ExponentialLR(optimizer, gamma = 0.9) 
-
-
 
 # Set up criteria  
 criterion = nn.CrossEntropyLoss()
